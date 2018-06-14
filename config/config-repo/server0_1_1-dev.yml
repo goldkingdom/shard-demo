@@ -1,0 +1,18 @@
+dataSource:
+  driverClassName: com.mysql.jdbc.Driver
+  url: jdbc:mysql://127.0.0.1:3306/server1_1?useUnicode=true&characterEncoding=utf8&characterSetResults=utf8&zeroDateTimeBehavior=convertToNull
+  username: root
+  password: 1QAZ2wsx
+  maxActive: 200
+  maxWait: 60000
+  minIdle: 1
+  maxIdle: 10
+  initialSize: 5
+  timeBetweenEvictionRunsMillis: 60000
+  minEvictableIdleTimeMillis: 300000
+  validationQuery: select 1 from dual
+  testOnBorrow: true
+  testWhileIdle: true
+  poolPreparedStatements: true
+  maxOpenPreparedStatements: 200
+  maximumPoolSize: 200

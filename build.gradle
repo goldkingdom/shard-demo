@@ -1,0 +1,103 @@
+buildscript {
+
+    ext {
+        springBootVersion = "1.5.6.RELEASE"
+        springloadedVersion = "1.2.7.RELEASE"
+        springGradleVersion = "1.0.3.RELEASE"
+    }
+
+    repositories {
+        mavenLocal()
+        mavenCentral()
+        maven { url "http://maven.aliyun.com/nexus/content/groups/public" }
+        maven { url "https://repo.spring.io/libs-milestone" }
+    }
+
+    dependencies {
+        classpath "io.spring.gradle:dependency-management-plugin:${springGradleVersion}"
+        classpath "org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}"
+        classpath "org.springframework:springloaded:${springloadedVersion}"
+    }
+
+}
+
+allprojects {
+
+    group = "cn.xj"
+    version = "1.0-SNAPSHOT"
+
+    apply plugin: "java"
+    apply plugin: "idea"
+    apply plugin: "spring-boot"
+    apply plugin: "io.spring.dependency-management"
+
+    sourceCompatibility = 1.8
+    targetCompatibility = 1.8
+
+    [compileJava, compileTestJava, javadoc]*.options*.encoding = "UTF-8"
+
+    ext {
+        springCloudVersion = "Dalston.SR3"
+        springBootVersion = "1.5.6.RELEASE"
+        consulVersion = "1.2.1.RELEASE"
+        sleuthVersion = "1.2.4.RELEASE"
+        guavaVersion = "23.0"
+        gsonVersion = "2.8.1"
+        feignVersion = "8.18.0"
+        nettyVersion = "4.1.25.Final"
+    }
+
+    repositories {
+        mavenLocal()
+        mavenCentral()
+        maven { url "http://maven.aliyun.com/nexus/content/groups/public" }
+        maven { url "https://repo.spring.io/libs-milestone" }
+    }
+
+    dependencyManagement {
+        imports {
+            mavenBom "org.springframework.cloud:spring-cloud-dependencies:${springCloudVersion}"
+            mavenBom "org.springframework.cloud:spring-cloud-consul-dependencies:${consulVersion}"
+            mavenBom "org.springframework.cloud:spring-cloud-sleuth:${sleuthVersion}"
+        }
+    }
+
+    dependencies {
+        compile("org.springframework.cloud:spring-cloud-starter-consul-discovery",
+                "org.springframework.cloud:spring-cloud-starter-config",
+                "org.springframework.cloud:spring-cloud-starter-hystrix",
+                "org.springframework.cloud:spring-cloud-starter-hystrix-dashboard",
+                "org.springframework.cloud:spring-cloud-starter-feign",
+                "org.springframework.cloud:spring-cloud-starter-bus-amqp",
+                "org.springframework.cloud:spring-cloud-starter-sleuth",
+                "org.springframework.boot:spring-boot-devtools",
+                "org.springframework.boot:spring-boot-starter-web",
+                "org.springframework.boot:spring-boot-starter-actuator",
+                "org.springframework.boot:spring-boot-configuration-processor",
+                "org.springframework.boot:spring-boot-starter-test",
+                "org.springframework.boot:spring-boot-starter-logging",
+                "org.apache.commons:commons-lang3:3.4",
+                "org.projectlombok:lombok",
+                "com.google.guava:guava:${guavaVersion}",
+                "com.google.code.gson:gson:${gsonVersion}",
+                "com.netflix.feign:feign-jackson:${feignVersion}",
+                "com.netflix.feign:feign-ribbon:${feignVersion}",
+                "io.netty:netty-all:${nettyVersion}")
+    }
+
+    sourceSets {
+        main {
+            resources.srcDirs = ['src/main/resources', 'src/main/java']
+            resources.includes = ['**/*.xml', '**/*.yml', '**/*.properties']
+        }
+    }
+
+}
+
+findMainClass {
+    enabled = false
+}
+
+bootRepackage {
+    enabled = false
+}

@@ -1,0 +1,37 @@
+server.port: 9999
+
+spring:
+  application.name: config
+  profiles:
+    active: ${config.profile:dev}
+#    active: native
+  cloud:
+    config:
+      profile: ${spring.profiles.active}
+      server:
+#        native.search-locations: E:/shard-demo/config/config-repo
+        git:
+          uri: https://github.com/goldkingdom/shard-demo/
+          search-paths: config/config-repo
+    consul:
+      enabled: true
+      host: localhost
+      port: 8500
+      discovery:
+        enabled: true
+        instanceId: ${spring.application.name}
+        serviceName: ${spring.application.name}
+        port: ${server.port}
+        healthCheckPath: /health
+        healthCheckInterval: 15s
+        preferIpAddress: true
+        tags: ${spring.application.name}
+      config:
+        enabled: true
+        dataKey: configuration
+        format: YAML
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: root
+    password: 123456

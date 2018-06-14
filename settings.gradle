@@ -1,0 +1,3 @@
+rootProject.name = 'shard-demo'
+include 'config'
+

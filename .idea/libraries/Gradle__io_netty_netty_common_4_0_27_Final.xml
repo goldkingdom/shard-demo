@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="Gradle: io.netty:netty-common:4.0.27.Final">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.m2/repository/io/netty/netty-common/4.0.27.Final/netty-common-4.0.27.Final.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

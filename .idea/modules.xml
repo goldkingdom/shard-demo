@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/config/config.iml" filepath="$PROJECT_DIR$/.idea/modules/config/config.iml" group="config" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/config/config_main.iml" filepath="$PROJECT_DIR$/.idea/modules/config/config_main.iml" group="config" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/config/config_test.iml" filepath="$PROJECT_DIR$/.idea/modules/config/config_test.iml" group="config" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/shard-demo.iml" filepath="$PROJECT_DIR$/.idea/modules/shard-demo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/shard-demo_main.iml" filepath="$PROJECT_DIR$/.idea/modules/shard-demo_main.iml" group="shard-demo" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/shard-demo_test.iml" filepath="$PROJECT_DIR$/.idea/modules/shard-demo_test.iml" group="shard-demo" />
+    </modules>
+  </component>
+</project>
