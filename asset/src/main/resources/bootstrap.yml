@@ -1,0 +1,101 @@
+server:
+  context-path: /
+  session.timeout: 1800
+
+spring:
+  profiles:
+    active: ${config.profile:dev}
+  cloud:
+    config:
+      uri: ${SPRING_CONFIG_URI:http://localhost:9999}
+      profile: ${spring.profiles.active}
+    consul:
+      enabled: true
+      discovery:
+        enabled: true
+        healthCheckPath: /health
+#        healthCheckUrl: http://${spring.cloud.consul.host}:${server.port}/health
+        healthCheckInterval: 15s
+        preferIpAddress: true
+    stream:
+      binders:
+        rabbitStream:
+          type: rabbit  #可以是其它，比如kafka
+          enviroment.spring.rabbitmq:
+            host: ${spring.rabbitmq.host}
+            port: ${spring.rabbitmq.port}
+            username: ${spring.rabbitmq.username}
+            password: ${spring.rabbitmq.password}
+            virtual-host: /goldkingdom
+    bus.trace.enabled: true
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: root
+    password: 123456
+  jpa:
+    show-sql: true
+    generate-ddl: true
+    hibernate.ddl-auto: update
+#  redis:
+#    cluster:
+#      #集群配置
+#      connectionTimeout: 2000
+#      soTimeout: 1000
+#      maxAttempts: 5
+#      password:
+#      maxTotal: 15
+#      #连接池配置
+#      maxidle: 10
+#      minidle: 10
+#      maxWaitMillis: 1000
+#      testOnBorrow: true
+#      testOnReturn: false
+#      testWhileIdle: false
+#      #节点
+#      nodes:
+#        - 127.0.0.1:7000
+#        - 127.0.0.1:7001
+#        - 127.0.0.1:7002
+
+hystrix.command.default.execution:
+  timeout.enabled: true
+  isolation.thread.timeoutInMilliseconds: 5000
+
+ribbon:
+  ReadTimeout: 10000
+  ConnectTimeout: 10000
+  MaxAutoRetries: 0
+  MaxAutoRetriesNextServer: 1
+
+feign:
+  hystrix.enabled: true
+  compression:
+    request:
+      enabled: true #请求和响应GZIP压缩支持
+      mime-types: text/xml,application/xml,application/json #支持压缩的mime types
+      min-request-size: 2048
+    response.enable: true
+
+logback:
+  home: D:/cloud-container/log
+  level: INFO
+
+logging:
+  config: classpath:logback-${spring.profiles.active}.xml
+  level:
+    cn.xj: info
+    org.mybatis.spring.boot: debug
+
+baseProperties:
+  version: 1.0
+  beanPath: cn.xj.project.model
+
+contextContainer:
+  nodeInfoContainer:
+    server0:
+      - server0_0:
+        - server0_0_0
+#        - server0_0_1
+      - server0_1:
+        - server0_1_0

@@ -1,0 +1,16 @@
+subprojects {
+    dependencies {
+        compile("com.zaxxer:HikariCP",
+                "mysql:mysql-connector-java",
+                "com.oracle:ojdbc6:11.2.0.3")
+        compile project(":asset:access")
+    }
+}
+
+findMainClass {
+    enabled = false
+}
+
+bootRepackage {
+    enabled = false
+}

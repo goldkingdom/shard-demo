@@ -1,0 +1,13 @@
+subprojects {
+    dependencies {
+        compile project(":asset")
+    }
+}
+
+findMainClass {
+    enabled = false
+}
+
+bootRepackage {
+    enabled = false
+}

@@ -2,9 +2,27 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/asset/access/access.iml" filepath="$PROJECT_DIR$/.idea/modules/asset/access/access.iml" group="asset/access" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/asset/access/access_main.iml" filepath="$PROJECT_DIR$/.idea/modules/asset/access/access_main.iml" group="asset/access" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/asset/access/access_test.iml" filepath="$PROJECT_DIR$/.idea/modules/asset/access/access_test.iml" group="asset/access" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/asset/asset.iml" filepath="$PROJECT_DIR$/.idea/modules/asset/asset.iml" group="asset" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/asset/asset_main.iml" filepath="$PROJECT_DIR$/.idea/modules/asset/asset_main.iml" group="asset" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/asset/asset_test.iml" filepath="$PROJECT_DIR$/.idea/modules/asset/asset_test.iml" group="asset" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/config/config.iml" filepath="$PROJECT_DIR$/.idea/modules/config/config.iml" group="config" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/config/config_main.iml" filepath="$PROJECT_DIR$/.idea/modules/config/config_main.iml" group="config" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/config/config_test.iml" filepath="$PROJECT_DIR$/.idea/modules/config/config_test.iml" group="config" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/asset/datasource/datasource.iml" filepath="$PROJECT_DIR$/.idea/modules/asset/datasource/datasource.iml" group="asset/datasource" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/asset/datasource/datasource0/datasource0.iml" filepath="$PROJECT_DIR$/.idea/modules/asset/datasource/datasource0/datasource0.iml" group="asset/datasource/datasource0" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/asset/datasource/datasource0/datasource0_main.iml" filepath="$PROJECT_DIR$/.idea/modules/asset/datasource/datasource0/datasource0_main.iml" group="asset/datasource/datasource0" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/asset/datasource/datasource0/datasource0_test.iml" filepath="$PROJECT_DIR$/.idea/modules/asset/datasource/datasource0/datasource0_test.iml" group="asset/datasource/datasource0" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/asset/datasource/datasource_main.iml" filepath="$PROJECT_DIR$/.idea/modules/asset/datasource/datasource_main.iml" group="asset/datasource" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/asset/datasource/datasource_test.iml" filepath="$PROJECT_DIR$/.idea/modules/asset/datasource/datasource_test.iml" group="asset/datasource" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/generator/generator.iml" filepath="$PROJECT_DIR$/.idea/modules/generator/generator.iml" group="generator" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/generator/generator_main.iml" filepath="$PROJECT_DIR$/.idea/modules/generator/generator_main.iml" group="generator" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/generator/generator_test.iml" filepath="$PROJECT_DIR$/.idea/modules/generator/generator_test.iml" group="generator" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/asset/access/mybatis/mybatis.iml" filepath="$PROJECT_DIR$/.idea/modules/asset/access/mybatis/mybatis.iml" group="asset/access/mybatis" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/asset/access/mybatis/mybatis_main.iml" filepath="$PROJECT_DIR$/.idea/modules/asset/access/mybatis/mybatis_main.iml" group="asset/access/mybatis" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/asset/access/mybatis/mybatis_test.iml" filepath="$PROJECT_DIR$/.idea/modules/asset/access/mybatis/mybatis_test.iml" group="asset/access/mybatis" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/shard-demo.iml" filepath="$PROJECT_DIR$/.idea/modules/shard-demo.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/shard-demo_main.iml" filepath="$PROJECT_DIR$/.idea/modules/shard-demo_main.iml" group="shard-demo" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/shard-demo_test.iml" filepath="$PROJECT_DIR$/.idea/modules/shard-demo_test.iml" group="shard-demo" />

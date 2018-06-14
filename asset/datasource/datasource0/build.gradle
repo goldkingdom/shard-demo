@@ -1,0 +1,7 @@
+findMainClass {
+    enabled = false
+}
+
+bootRepackage {
+    enabled = false
+}

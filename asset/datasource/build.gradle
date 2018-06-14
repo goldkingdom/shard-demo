@@ -1,0 +1,14 @@
+subprojects {
+    dependencies {
+        compile("org.hibernate.javax.persistence:hibernate-jpa-2.1-api:1.0.0.Final")
+        compile project(":asset:datasource")
+    }
+}
+
+findMainClass {
+    enabled = false
+}
+
+bootRepackage {
+    enabled = false
+}

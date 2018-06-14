@@ -19,8 +19,22 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="access_main" target="1.8" />
+      <module name="access_test" target="1.8" />
+      <module name="asset_main" target="1.8" />
+      <module name="asset_test" target="1.8" />
       <module name="config_main" target="1.8" />
       <module name="config_test" target="1.8" />
+      <module name="datasource0_main" target="1.8" />
+      <module name="datasource0_test" target="1.8" />
+      <module name="datasource_main" target="1.8" />
+      <module name="datasource_test" target="1.8" />
+      <module name="generator_main" target="1.8" />
+      <module name="generator_test" target="1.8" />
+      <module name="mybatis_main" target="1.8" />
+      <module name="mybatis_test" target="1.8" />
+      <module name="repository_main" target="1.8" />
+      <module name="repository_test" target="1.8" />
       <module name="shard-demo_main" target="1.8" />
       <module name="shard-demo_test" target="1.8" />
     </bytecodeTargetLevel>

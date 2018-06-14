@@ -1,3 +1,13 @@
 rootProject.name = 'shard-demo'
 include 'config'
+include 'asset'
+include 'asset:datasource'
+findProject(':asset:datasource')?.name = 'datasource'
+include 'asset:datasource:datasource0'
+findProject(':asset:datasource:datasource0')?.name = 'datasource0'
+include 'asset:access'
+findProject(':asset:access')?.name = 'access'
+include 'asset:access:mybatis'
+findProject(':asset:access:mybatis')?.name = 'mybatis'
+include 'generator'
 
